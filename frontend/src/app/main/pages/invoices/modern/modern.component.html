@@ -1,0 +1,1236 @@
+<div id="invoice" class="modern page-layout blank" fxLayout="row">
+
+    <div class="invoice-container">
+
+        <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-around center" class="mb-12 mx-20">
+            <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-between stretch" fxLayoutAlign.gt-sm="space-between center" fxFlex="100%" fxFlex.gt-sm="80" class="container-select-projects">
+                
+                <mat-form-field appearance="outline" fxLayoutAlign="space-between stretch" fxFlex fxFlex.gt-sm="45">
+                    <mat-label>Customer</mat-label>
+                    <mat-select>
+                        <mat-option value="option">None</mat-option>
+                        <mat-option value="option">Consolidated Credit Counseling Services of Canada, Inc.</mat-option>
+                        <mat-option value="option">Consolidated Credit Counseling Services of Canada, Inc.</mat-option>
+                        <mat-option value="option">Consolidated Credit Counseling Services of Canada, Inc.</mat-option>
+                        <mat-option value="option">Consolidated Credit Counseling Services of Canada, Inc.</mat-option>
+                        <mat-option value="option">Consolidated Credit Counseling Services of Canada, Inc.</mat-option>
+                        <mat-option value="option">Consolidated Credit Counseling Services of Canada, Inc.</mat-option>
+                        <mat-option value="option">Consolidated Credit Counseling Services of Canada, Inc.</mat-option>
+                        <mat-option value="option">Consolidated Credit Counseling Services of Canada, Inc.</mat-option>
+                    </mat-select>
+                    <!-- <mat-hint align="end">Here's the dropdown arrow ^</mat-hint> -->
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" fxLayoutAlign="space-between stretch" fxFlex fxFlex.gt-sm="45">
+                    <mat-label>Project</mat-label>
+                    <mat-select>
+                        <mat-option value="option">None</mat-option>
+                        <mat-option value="option">Website Translation and On-Page SEO for www.costcofinance.com
+                        </mat-option>
+                        <mat-option value="option">Website Translation and On-Page SEO for www.costcofinance.com
+                        </mat-option>
+                        <mat-option value="option">Website Translation and On-Page SEO for www.costcofinance.com
+                        </mat-option>
+                        <mat-option value="option">Website Translation and On-Page SEO for www.costcofinance.com
+                        </mat-option>
+                        <mat-option value="option">Website Translation and On-Page SEO for www.costcofinance.com
+                        </mat-option>
+                        <mat-option value="option">Website Translation and On-Page SEO for www.costcofinance.com
+                        </mat-option>
+                    </mat-select>
+                    <!-- <mat-hint align="end">Here's the dropdown arrow ^</mat-hint> -->
+                </mat-form-field>
+                <button mat-raised-button color="accent" fxFlex="10">View</button>
+            </div>
+            
+            <div fxLayout="row" fxLayoutAlign="end center" fxFlex="20">
+                <button mat-mini-fab color="accent" class="mx-4" (click)="composeDialog()"
+                    matTooltip="Create a new Project">
+                    <mat-icon>add</mat-icon>
+                </button>
+
+                <button mat-mini-fab color="accent" [matMenuTriggerFor]="menuProject" class="mx-4" matTooltip="Manage Project">
+                    <mat-icon>edit</mat-icon>
+                </button>
+
+                <mat-menu #menuProject="matMenu">
+                    <button mat-menu-item (click)="composeDialog()">
+                        <mat-icon>edit</mat-icon>Edit Project
+                    </button>
+                    <button mat-menu-item (click)="composeDialog()">
+                        <mat-icon>supervised_user_circle</mat-icon> Assigned Users
+                    </button>
+                    <button mat-menu-item (click)="savetemplateDialog()">
+                        <mat-icon>save</mat-icon> Save as Template
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>remove_circle</mat-icon>Remove Project
+                    </button>
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item><mat-icon>settings</mat-icon> Internal Settings</button>
+                </mat-menu>
+
+                <!-- <button mat-mini-fab color="warn" class="mx-4" matTooltip="Create PDF">
+                    <mat-icon>picture_as_pdf</mat-icon>
+                </button> -->
+            </div>
+        </div>
+
+
+        <mat-tab-group mat-align-tabs="start">
+
+            <mat-tab label="Status Progress">
+
+                <div class="card px-24">
+
+                    <span class="title-project-progress mb-12" fxLayout="row" fxLayoutAlign="space-between center">
+                        <span class="h2"><b>Website Translation and On-Page SEO for www.costcofinance.com</b> <span
+                                class="h3 ecd-tag" fxLayout="row" fxLayoutAlign="start center">
+                                <mat-icon class="mr-8">access_time</mat-icon> ECD: Jul 06, 2020
+                            </span></span>
+                        <span fxLayout="row">
+                            <button mat-stroked-button class="mr-8" (click)="notificationDialog()">
+                                <mat-icon>notifications</mat-icon> Send notification
+                            </button>
+
+                            <button mat-flat-button color="primary">
+                                <mat-icon>picture_as_pdf</mat-icon> Download as PDF
+                            </button>
+
+                        </span>
+                    </span>
+
+                    <table class="table-project mb-28">
+                        <thead class="titile-project">
+                            <tr>
+                                <th fxFlex="40" fxLayoutAlign="start center">
+                                    INTEGRATIONS (WEBHOOKS, APIS, ETC.)
+                                </th>
+                                <th fxFlex="50" fxLayout="column" fxLayoutAlign="center start">
+                                    <mat-progress-bar color="amber" mode="determinate" value="80"></mat-progress-bar>
+                                </th>
+
+                                <th fxFlex="10" fxLayoutAlign="end center">
+                                    <button mat-icon-button>
+                                        <mat-icon class="green-500-fg" (click)="newtaskDialog()">add_circle</mat-icon>
+                                    </button>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <thead>
+                            <tr>
+                                <th fxFlex="40" fxLayoutAlign="start center">
+                                    1. Mock ups design
+                                </th>
+                                <th fxFlex="50" fxLayout="column" fxLayoutAlign="center start">
+                                    <mat-progress-bar color="amber" mode="determinate" value="80"></mat-progress-bar>
+                                </th>
+
+                                <th fxFlex="10" fxLayoutAlign="end center">
+                                    <button mat-icon-button>
+                                        <mat-icon class="primary-500-fg" [matMenuTriggerFor]="menu2">more_vert</mat-icon>
+                                    </button>
+                                    <mat-menu #menu2="matMenu">
+                                        <button mat-menu-item (click)="newtaskDialog()">
+                                            <mat-icon>add_circle</mat-icon>Add Sub Task
+                                        </button>
+                                        <button mat-menu-item (click)="savetemplateDialog()">
+                                            <mat-icon>save</mat-icon>Save As Template
+                                        </button>
+                                        <button mat-menu-item class="red-500-fg">
+                                            <mat-icon class="red-500-fg">remove_circle</mat-icon>Remove Task
+                                        </button>
+                                    </mat-menu>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody cdkDropList class="list" (cdkDropListDropped)="drop($event)">
+                            <tr class="box" cdkDrag>
+                                <td fxFlex="40" class="pr-20">
+                                    <div class="title">
+                                        <span class="name-task">Subtask 1</span>
+                                    </div>
+                                </td>
+
+                                <td fxFlex="50" fxLayout="column" fxLayoutAlign="center start">
+                                    <mat-progress-bar color="amber" mode="determinate" value="10"></mat-progress-bar>
+                                    <span>10%</span>
+                                </td>
+
+                                <td fxFlex="10" fxLayoutAlign="end center">
+                                    <button mat-stroked-button color="primary"
+                                        [matMenuTriggerFor]="menu">Actions</button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item (click)="composeDialog()">
+                                            <mat-icon>edit</mat-icon>Edit
+                                        </button>
+                                        <button mat-menu-item>
+                                            <mat-icon>done</mat-icon>Completed
+                                        </button>
+                                        <button mat-menu-item class="red-500-fg">
+                                            <mat-icon class="red-500-fg">remove_circle</mat-icon>Remove
+                                        </button>
+                                        <mat-divider></mat-divider>
+                                        <button mat-menu-item>Send to Trello</button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+
+
+                            <tr class="box" cdkDrag>
+                                <td fxFlex="40" class="pr-20">
+                                    <div class="title">
+                                        <span class="name-task">Subtask 2</span>
+                                        <button mat-icon-button class="primary-400-fg" (click)="composeDialog2()"
+                                            matTooltip="Note available" aria-label="Note available">
+                                            <mat-icon>bookmark</mat-icon>
+                                        </button>
+
+                                    </div>
+                                </td>
+
+                                <td fxFlex="50" fxLayout="column" fxLayoutAlign="center start">
+                                    <mat-progress-bar color="amber" mode="determinate" value="50"></mat-progress-bar>
+                                    <span>50%</span>
+                                </td>
+
+                                <td fxFlex="10" fxLayoutAlign="end center">
+                                    <button mat-stroked-button color="primary"
+                                        [matMenuTriggerFor]="menu">Actions</button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item (click)="composeDialog()">
+                                            <mat-icon>edit</mat-icon>Edit
+                                        </button>
+                                        <button mat-menu-item>
+                                            <mat-icon>done</mat-icon>Completed
+                                        </button>
+                                        <button mat-menu-item class="red-500-fg">
+                                            <mat-icon class="red-500-fg">remove_circle</mat-icon>Remove
+                                        </button>
+                                        <mat-divider></mat-divider>
+                                        <button mat-menu-item>Send to Trello</button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+
+                            <tr class="box" cdkDrag>
+                                <td fxFlex="40" class="pr-20">
+                                    <div class="title">
+                                        <span class="name-task">Subtask 3</span>
+                                    </div>
+                                </td>
+
+                                <td fxFlex="50" fxLayout="column" fxLayoutAlign="center start">
+                                    <mat-progress-bar class="green" mode="determinate" value="100"></mat-progress-bar>
+                                    <span>100%</span>
+                                </td>
+
+                                <td fxFlex="10" fxLayoutAlign="end center">
+                                    <button mat-stroked-button color="primary"
+                                        [matMenuTriggerFor]="menu">Actions</button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item (click)="composeDialog()">
+                                            <mat-icon>edit</mat-icon>Edit
+                                        </button>
+                                        <button mat-menu-item>
+                                            <mat-icon>done</mat-icon>Completed
+                                        </button>
+                                        <button mat-menu-item class="red-500-fg">
+                                            <mat-icon class="red-500-fg">remove_circle</mat-icon>Remove
+                                        </button>
+                                        <mat-divider></mat-divider>
+                                        <button mat-menu-item>Send to Trello</button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+
+                            <tr class="box" cdkDrag>
+                                <td fxFlex="40" class="pr-20">
+                                    <div class="title">
+                                        <span class="name-task">Subtask 4</span>
+                                        <button mat-icon-button class="primary-400-fg" (click)="composeDialog2()"
+                                            matTooltip="Note available" aria-label="Note available">
+                                            <mat-icon>bookmark</mat-icon>
+                                        </button>
+                                    </div>
+
+
+                                </td>
+
+                                <td fxFlex="50" fxLayout="column" fxLayoutAlign="center start">
+                                    <mat-progress-bar color="amber" mode="determinate" value="75"></mat-progress-bar>
+                                    <span>75%</span>
+                                </td>
+
+                                <td fxFlex="10" fxLayoutAlign="end center">
+                                    <button mat-stroked-button color="primary"
+                                        [matMenuTriggerFor]="menu">Actions</button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item (click)="composeDialog()">
+                                            <mat-icon>edit</mat-icon>Edit
+                                        </button>
+                                        <button mat-menu-item>
+                                            <mat-icon>done</mat-icon>Completed
+                                        </button>
+                                        <button mat-menu-item class="red-500-fg">
+                                            <mat-icon class="red-500-fg">remove_circle</mat-icon>Remove
+                                        </button>
+                                        <mat-divider></mat-divider>
+                                        <button mat-menu-item>Send to Trello</button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+
+                        <thead>
+                            <tr>
+                                <th fxFlex="40" fxLayoutAlign="start center">
+                                    2. Mock ups design
+                                </th>
+                                <th fxFlex="50" fxLayout="column" fxLayoutAlign="center start">
+                                    <mat-progress-bar color="amber" mode="determinate" value="80"></mat-progress-bar>
+                                </th>
+
+                                <th fxFlex="10" fxLayoutAlign="end center">
+                                    <button mat-icon-button>
+                                        <mat-icon class="primary-500-fg" [matMenuTriggerFor]="menu2">more_vert</mat-icon>
+                                    </button>
+                                    <mat-menu #menu2="matMenu">
+                                        <button mat-menu-item (click)="newtaskDialog()">
+                                            <mat-icon>add_circle</mat-icon>Add Sub Task
+                                        </button>
+                                        <button mat-menu-item (click)="savetemplateDialog()">
+                                            <mat-icon>save</mat-icon>Save As Template
+                                        </button>
+                                        <button mat-menu-item class="red-500-fg">
+                                            <mat-icon class="red-500-fg">remove_circle</mat-icon>Remove Task
+                                        </button>
+                                    </mat-menu>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody cdkDropList class="list" (cdkDropListDropped)="drop($event)">
+                            <tr class="box" cdkDrag>
+                                <td fxFlex="40" class="pr-20">
+                                    <div class="title">
+                                        <span class="name-task">Subtask 1</span>
+                                    </div>
+                                </td>
+
+                                <td fxFlex="50" fxLayout="column" fxLayoutAlign="center start">
+                                    <mat-progress-bar color="amber" mode="determinate" value="10"></mat-progress-bar>
+                                    <span>10%</span>
+                                </td>
+
+                                <td fxFlex="10" fxLayoutAlign="end center">
+                                    <button mat-stroked-button color="primary"
+                                        [matMenuTriggerFor]="menu">Actions</button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item (click)="composeDialog()">
+                                            <mat-icon>edit</mat-icon>Edit
+                                        </button>
+                                        <button mat-menu-item>
+                                            <mat-icon>done</mat-icon>Completed
+                                        </button>
+                                        <button mat-menu-item class="red-500-fg">
+                                            <mat-icon class="red-500-fg">remove_circle</mat-icon>Remove
+                                        </button>
+                                        <mat-divider></mat-divider>
+                                        <button mat-menu-item>Send to Trello</button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+
+
+                            <tr class="box" cdkDrag>
+                                <td fxFlex="40" class="pr-20">
+                                    <div class="title">
+                                        <span class="name-task">Subtask 2</span>
+                                        <button mat-icon-button class="primary-400-fg" (click)="composeDialog2()"
+                                            matTooltip="Note available" aria-label="Note available">
+                                            <mat-icon>bookmark</mat-icon>
+                                        </button>
+
+                                    </div>
+                                </td>
+
+                                <td fxFlex="50" fxLayout="column" fxLayoutAlign="center start">
+                                    <mat-progress-bar color="amber" mode="determinate" value="50"></mat-progress-bar>
+                                    <span>50%</span>
+                                </td>
+
+                                <td fxFlex="10" fxLayoutAlign="end center">
+                                    <button mat-stroked-button color="primary"
+                                        [matMenuTriggerFor]="menu">Actions</button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item (click)="composeDialog()">
+                                            <mat-icon>edit</mat-icon>Edit
+                                        </button>
+                                        <button mat-menu-item>
+                                            <mat-icon>done</mat-icon>Completed
+                                        </button>
+                                        <button mat-menu-item class="red-500-fg">
+                                            <mat-icon class="red-500-fg">remove_circle</mat-icon>Remove
+                                        </button>
+                                        <mat-divider></mat-divider>
+                                        <button mat-menu-item>Send to Trello</button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+
+                            <tr class="box" cdkDrag>
+                                <td fxFlex="40" class="pr-20">
+                                    <div class="title">
+                                        <span class="name-task">Subtask 3</span>
+                                    </div>
+                                </td>
+
+                                <td fxFlex="50" fxLayout="column" fxLayoutAlign="center start">
+                                    <mat-progress-bar class="green" mode="determinate" value="100"></mat-progress-bar>
+                                    <span>100%</span>
+                                </td>
+
+                                <td fxFlex="10" fxLayoutAlign="end center">
+                                    <button mat-stroked-button color="primary"
+                                        [matMenuTriggerFor]="menu">Actions</button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item (click)="composeDialog()">
+                                            <mat-icon>edit</mat-icon>Edit
+                                        </button>
+                                        <button mat-menu-item>
+                                            <mat-icon>done</mat-icon>Completed
+                                        </button>
+                                        <button mat-menu-item class="red-500-fg">
+                                            <mat-icon class="red-500-fg">remove_circle</mat-icon>Remove
+                                        </button>
+                                        <mat-divider></mat-divider>
+                                        <button mat-menu-item>Send to Trello</button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+
+                            <tr class="box" cdkDrag>
+                                <td fxFlex="40" class="pr-20">
+                                    <div class="title">
+                                        <span class="name-task">Subtask 4</span>
+                                        <button mat-icon-button class="primary-400-fg" (click)="composeDialog2()"
+                                            matTooltip="Note available" aria-label="Note available">
+                                            <mat-icon>bookmark</mat-icon>
+                                        </button>
+                                    </div>
+
+
+                                </td>
+
+                                <td fxFlex="50" fxLayout="column" fxLayoutAlign="center start">
+                                    <mat-progress-bar color="amber" mode="determinate" value="75"></mat-progress-bar>
+                                    <span>75%</span>
+                                </td>
+
+                                <td fxFlex="10" fxLayoutAlign="end center">
+                                    <button mat-stroked-button color="primary"
+                                        [matMenuTriggerFor]="menu">Actions</button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item (click)="composeDialog()">
+                                            <mat-icon>edit</mat-icon>Edit
+                                        </button>
+                                        <button mat-menu-item>
+                                            <mat-icon>done</mat-icon>Completed
+                                        </button>
+                                        <button mat-menu-item class="red-500-fg">
+                                            <mat-icon class="red-500-fg">remove_circle</mat-icon>Remove
+                                        </button>
+                                        <mat-divider></mat-divider>
+                                        <button mat-menu-item>Send to Trello</button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+
+            </mat-tab>
+
+
+            <mat-tab label="Development">
+                <div class="card p-12 p-md-32" style="background:#f3f6f9" fxLayout.gt-sm="row" fxLayout="column">
+                    <div fxLayout="column" fxFlex="100" fxFlex.gt-sm="70" class="pr-md-20">
+                        <h2 class="mb-16 mt-0">Any Feedback?</h2>
+
+                        <!-- CHAT CONTENT -->
+                        <div id="chat-content" fxFlex="1 1 auto" fusePerfectScrollbar>
+
+                            <!-- CHAT MESSAGES -->
+                            <div class="chat-messages">
+
+                                <!-- MESSAGE -->
+                                <div class="message-row" fxLayout="row">
+
+                                    <img src="assets/images/avatars/Velazquez.jpg" class="avatar">
+
+                                    <div class="messsage-content">
+                                        <div class="user" fxLayout="row">
+                                            <div class="user-name mr-8">Charlie Adams</div>
+                                            <div class="user-company mr-8">Hispanic Market Advisors</div>
+                                        </div>
+
+                                        <div class="bubble">
+                                            <div class="message" fxLayout="column">
+                                                Donec nec justo <a href="#">Status progresss</a> eget felis facilisis fermentum. Aliquam porttitor mauris
+                                                sit amet orci. Aenean dignissim pellentesque felis.
+
+                                                <div class="files-attached mt-8">
+                                                    <mat-card class="file-attached mr-8" fxFlex="15">
+                                                        <img mat-card-image
+                                                            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                                            alt="Photo of a Shiba Inu">
+                                                    </mat-card>
+
+                                                    <mat-card class="file-attached mr-8" fxFlex="15">
+                                                        <img mat-card-image
+                                                            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                                            alt="Photo of a Shiba Inu">
+                                                    </mat-card>
+
+                                                    <mat-card class="file-attached mr-8" fxFlex="15">
+                                                        <img mat-card-image
+                                                            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                                            alt="Photo of a Shiba Inu">
+                                                    </mat-card>
+                                                </div>
+
+                                            </div>
+                                            <div class="time secondary-text">4/21/17, 8:00 PM</div>
+                                            <button mat-stroked-button color="accent" class="mt-8" (click)="firstAccordion.openAll()">Reply comment</button>
+                                        </div>
+
+
+                                          <mat-accordion multi #firstAccordion="matAccordion">
+                                            <mat-expansion-panel class="bg-transparent">
+
+                                                <div fxLayout="column" fxLayoutAlign="start start" fxFlex="100" class="mt-12 mb-16">
+                                                    <h2 class="w-100-p">Reply</h2>
+                                                    <mat-form-field fxFlex="100" class="mx-4 w-100-p">
+                                                        <mat-label>New comment</mat-label>
+                                                        <textarea matInput appearance="standard" name="newcomment"
+                                                            formControlName="newcomment" rows="5"></textarea>
+                                                    </mat-form-field>
+                                                    <div fxLayout="row">
+                                                        <button mat-raised-button color="accent" class="mr-8">Reply</button>
+                                                        <button mat-raised-button (click)="firstAccordion.closeAll()">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </mat-expansion-panel>  
+                                          </mat-accordion>
+
+
+
+
+                                        <div class="message-row bubble-reply mt-12" fxLayout="row">
+
+                                            <img src="assets/images/avatars/Josefina.jpg" class="avatar">
+
+                                            <div class="messsage-content">
+                                                <div class="user" fxLayout="row">
+                                                    <div class="user-name mr-8">Martha Ramirez</div>
+                                                    <div class="user-company mr-8">Customer Name</div>
+                                                </div>
+
+                                                <div class="bubble">
+                                                    <div class="message" fxLayout="column">
+                                                        Donec nec justo eget felis facilisis fermentum. Aliquam
+                                                        porttitor mauris sit amet orci. Aenean dignissim pellentesque
+                                                        felis, <a href="#">Status progresss</a>.
+
+                                                    </div>
+                                                    <div class="time secondary-text">4/21/17, 8:00 PM</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+
+
+                                
+                                <!-- MESSAGE -->
+                                <div class="message-row" fxLayout="row">
+
+                                    <img src="assets/images/avatars/Josefina.jpg" class="avatar">
+
+                                    <div class="messsage-content">
+                                        <div class="user" fxLayout="row">
+                                            <div class="user-name mr-8">Martha Ramirez</div>
+                                            <div class="user-company mr-8">Customer Name</div>
+                                        </div>
+
+                                        <div class="bubble">
+                                            <div class="message" fxLayout="column">
+                                                Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris
+                                                sit amet orci. Aenean dignissim pellentesque felis.
+
+                                            </div>
+                                            <div class="time secondary-text">4/21/17, 8:00 PM</div>
+                                            <button mat-stroked-button color="accent" class="mt-8">Reply
+                                                comment</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="message-row" fxLayout="column">
+                                    <h2>New comment</h2>
+                                    <mat-form-field fxFlex="100" class="mx-4">
+                                        <mat-label>New comment</mat-label>
+                                        <textarea matInput appearance="standard" name="newcomment"
+                                            formControlName="newcomment" rows="5"></textarea>
+                                    </mat-form-field>
+                                </div>
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div fxLayout="column" fxFlex="100" fxFlex.gt-sm="30">
+
+                        <div class="mb-12"><button mat-raised-button color="accent">Approve Phase <mat-icon>
+                                    navigate_next</mat-icon></button></div>
+
+                        <mat-card class="card-mockup mb-8">
+                            <mat-card-header>
+                                <mat-card-title>Mock-ups Designs</mat-card-title>
+                                <mat-card-subtitle>Desktop View</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <section>
+                                    <div class="card-content-row" fxLayout="row">
+                                        <div class="widgetmockup mr-12">
+                                            <button mat-flat-button class="green-600 pl-4 pl-md-16"
+                                                (click)="mockupDialog()">
+                                                <mat-icon>check</mat-icon> Home
+                                            </button>
+                                            <button mat-icon-button class="btn-remove-mockup" color="warn">
+                                                <mat-icon>close</mat-icon>
+                                            </button>
+                                        </div>
+                                        <div class="widgetmockup mr-12">
+                                            <button mat-stroked-button color="accent" (click)="mockupDialog()"
+                                                class="mr-4">Internal Page</button>
+                                            <button mat-icon-button class="btn-remove-mockup" color="warn">
+                                                <mat-icon>close</mat-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </mat-card-content>
+
+                            <mat-card-header>
+                                <mat-card-subtitle>Mobile View</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-content class="mb-0">
+                                <div class="card-content-row" fxLayout="row">
+
+                                    <div class="widgetmockup mr-12">
+                                        <button mat-flat-button class="green-600 pl-4 pl-md-16"
+                                            (click)="mockupDialog()">
+                                            <mat-icon>check</mat-icon> Home
+                                        </button>
+                                        <button mat-icon-button class="btn-remove-mockup" color="warn">
+                                            <mat-icon>close</mat-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="widgetmockup mr-12">
+                                        <button mat-flat-button class="green-600 pl-4 pl-md-16"
+                                            (click)="mockupDialog()">
+                                            <mat-icon>check</mat-icon> Internal Page
+                                        </button>
+                                        <button mat-icon-button class="btn-remove-mockup" color="warn">
+                                            <mat-icon>close</mat-icon>
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+                                <span class="card-last-update primary-200-fg"><mat-icon [inline]="true">access_time</mat-icon> Last update: 23/10/20 </span>
+
+                            </mat-card-content>
+
+
+                            <mat-card-actions>
+                                <button mat-flat-button (click)="addmockupDialog()">
+                                    <mat-icon>add</mat-icon> Add mockup
+                                </button>
+                            </mat-card-actions>
+
+                        </mat-card>
+
+                        <mat-card class="card-mockup mb-8">
+                            <mat-card-header>
+                                <mat-card-title>Attachments</mat-card-title>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <section>
+                                    <div class="card-content-row">
+                                        <a mat-flat-button href="#" target="_blank">
+                                            <mat-icon>attach_file</mat-icon> doc.docx
+                                        </a>
+                                        <a mat-flat-button href="#" target="_blank">
+                                            <mat-icon>image</mat-icon> img.jpg
+                                        </a>
+                                        <a mat-flat-button href="#" target="_blank">
+                                            <mat-icon>picture_as_pdf</mat-icon> pdf.pdf
+                                        </a>
+                                        <a mat-flat-button href="#" target="_blank">
+                                            <mat-icon>audiotrack</mat-icon> audio.mp3
+                                        </a>
+                                        <a mat-flat-button href="#" target="_blank">
+                                            <mat-icon>attach_file</mat-icon> doc.docx
+                                        </a>
+                                    </div>
+                                </section>
+                            </mat-card-content>
+                        </mat-card>
+
+                        <mat-card class="card-stats mb-8">
+                            <mat-card-header>
+                                <mat-card-title class="mx-0">Summary</mat-card-title>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <section>
+                                    <div class="card-content-row">
+                                        <div class="title-project">
+                                            <h5 class="h5 m-0">INTEGRATIONS (WEBHOOKS, APIS, ETC.)</h5>
+                                        </div>
+                                        <div class="summary-task">
+                                            <div class="summary-task-title-task"> 1. Mock ups design</div>
+                                            <mat-progress-bar color="amber" mode="determinate" value="20">
+                                            </mat-progress-bar>
+                                        </div>
+                                        <div class="summary-task">
+                                            <div class="summary-task-title-task"> 2. Mock ups design</div>
+                                            <mat-progress-bar color="amber" mode="determinate" value="80">
+                                            </mat-progress-bar>
+                                        </div>
+
+                                        <mat-card-actions class="mb-0" fxLayoutAlign="space-between center">
+                                            <button mat-button><mat-icon>format_list_bulleted</mat-icon> View Status Progress</button>
+                                        </mat-card-actions>
+                                        
+                                    </div>
+                                </section>
+                            </mat-card-content>
+                        </mat-card>
+
+                        <mat-card class="card-mockup mb-8">
+                            <mat-card-header>
+                                <mat-card-title>Assigned Users</mat-card-title>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <section>
+                                    <div class="card-content-row" fxLayout="column">
+                                        <div class="user-assigned" fxLayout="row" fxLayout.lt-lg="row" fxFlex="100" fxFlex.lt-lg="100%" >
+                                            <div class="py-8" fxLayout="row" fxLayoutAlign="start center" fxFlex="60">
+                                                <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/jane.jpg">
+                                                <div class="ml-16">
+                                                    <div class="text-bold">Jane Rodriguez</div>
+                                                    <div class="h5 text-bold secondary-text">Customer</div>
+                                                </div>
+                                            </div>
+                                            <div class="py-8 mr-8" fxLayout="row" fxLayoutAlign="end center" fxFlex="60">
+                                                <mat-checkbox class="widget-notification primary-300-fg">Notif.</mat-checkbox>
+                                            </div>
+                                        </div>
+
+                                        <div class="user-assigned" fxLayout="row" fxLayout.lt-lg="row" fxFlex="100" fxFlex.lt-lg="100%" >
+                                            <div class="py-8" fxLayout="row" fxLayoutAlign="start center" fxFlex="60">
+                                                <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/james.jpg">
+                                                <div class="ml-16">
+                                                    <div class="text-bold">James Saavedra</div>
+                                                    <div class="h5 text-bold secondary-text">Customer</div>
+                                                </div>
+                                            </div>
+                                            <div class="py-8 mr-8" fxLayout="row" fxLayoutAlign="end center" fxFlex="60">
+                                                <mat-checkbox class="widget-notification primary-300-fg">Notif.</mat-checkbox>
+                                            </div>
+                                        </div>
+
+                                        <div class="user-assigned" fxLayout="row" fxLayout.lt-lg="row" fxFlex="100" fxFlex.lt-lg="100%" >
+                                            <div class="py-8" fxLayout="row" fxLayoutAlign="start center" fxFlex="60">
+                                                <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/Helen.jpg">
+                                                <div class="ml-16">
+                                                    <div class="text-bold">Helen Perez</div>
+                                                    <div class="h5 text-bold secondary-text">Team member</div>
+                                                </div>
+                                            </div>
+                                            <div class="py-8 mr-md-8" fxLayout="row" fxLayoutAlign="end center" fxFlex="60">
+                                                <mat-checkbox class="widget-notification primary-300-fg">Notif.</mat-checkbox>
+                                            </div>
+                                        </div>
+                                        <mat-card-actions class="mb-0" fxLayoutAlign="space-between center">
+                                            <button mat-button><mat-icon>supervised_user_circle</mat-icon> Manage Users</button>
+                                            <button mat-flat-button color="accent" class="mr-md-8">Save Changes</button>
+                                        </mat-card-actions>
+                                    </div>
+                                </section>
+                            </mat-card-content>
+                        </mat-card>
+
+
+
+
+
+
+                        <div class="card-content-row">
+
+                            <a mat-button color="accent" class="mx-auto" (click)="addwidgetDialog()">
+                                <mat-icon>add</mat-icon>Add new widget
+                            </a>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Revision & Approval">
+                <div class="card p-12 p-md-32" style="background:#f3f6f9" fxLayout.gt-sm="row" fxLayout="column">
+                    <div fxLayout="column" fxFlex="100" fxFlex.gt-sm="70" class="pr-md-20">
+                        <h2 class="mb-16 mt-0">Any Feedback?</h2>
+
+                        <!-- CHAT CONTENT -->
+                        <div id="chat-content" fxFlex="1 1 auto" fusePerfectScrollbar>
+
+                            <!-- CHAT MESSAGES -->
+                            <div class="chat-messages">
+
+                                <!-- MESSAGE -->
+                                <div class="message-row" fxLayout="row">
+
+                                    <img src="assets/images/avatars/Velazquez.jpg" class="avatar">
+
+                                    <div class="messsage-content">
+                                        <div class="user" fxLayout="row">
+                                            <div class="user-name mr-8">Charlie Adams</div>
+                                            <div class="user-company mr-8">Hispanic Market Advisors</div>
+                                        </div>
+
+                                        <div class="bubble">
+                                            <div class="message" fxLayout="column">
+                                                Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris
+                                                sit amet orci. Aenean dignissim pellentesque felis.
+
+                                                <div class="files-attached mt-8">
+                                                    <mat-card class="file-attached mr-8" fxFlex="15">
+                                                        <img mat-card-image
+                                                            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                                            alt="Photo of a Shiba Inu">
+                                                    </mat-card>
+
+                                                    <mat-card class="file-attached mr-8" fxFlex="15">
+                                                        <img mat-card-image
+                                                            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                                            alt="Photo of a Shiba Inu">
+                                                    </mat-card>
+
+                                                    <mat-card class="file-attached mr-8" fxFlex="15">
+                                                        <img mat-card-image
+                                                            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                                            alt="Photo of a Shiba Inu">
+                                                    </mat-card>
+                                                </div>
+
+                                            </div>
+                                            <div class="time secondary-text">4/21/17, 8:00 PM</div>
+
+                                                <button mat-stroked-button color="accent" class="mt-8" (click)="secondAccordion.openAll()">Reply comment</button>
+
+                                        </div>
+
+                                        
+                                        <mat-accordion multi #secondAccordion="matAccordion">
+                                            <mat-expansion-panel class="bg-transparent">
+
+                                                <div fxLayout="column" fxLayoutAlign="start start" fxFlex="100" class="mt-12 mb-16">
+                                                    <h2 class="w-100-p">Reply</h2>
+                                                    <mat-form-field fxFlex="100" class="mx-4 w-100-p">
+                                                        <mat-label>New comment</mat-label>
+                                                        <textarea matInput appearance="standard" name="newcomment"
+                                                            formControlName="newcomment" rows="5"></textarea>
+                                                    </mat-form-field>
+                                                    <div fxLayout="row">
+                                                        <button mat-raised-button color="accent" class="mr-8">Reply</button>
+                                                        <button mat-raised-button (click)="secondAccordion.closeAll()">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </mat-expansion-panel>  
+                                          </mat-accordion>
+
+                                        <div class="message-row bubble-reply mt-12" fxLayout="row">
+
+                                            <img src="assets/images/avatars/Josefina.jpg" class="avatar">
+
+                                            <div class="messsage-content">
+                                                <div class="user" fxLayout="row">
+                                                    <div class="user-name mr-8">Martha Ramirez</div>
+                                                    <div class="user-company mr-8">Customer Name</div>
+                                                </div>
+
+                                                <div class="bubble">
+                                                    <div class="message" fxLayout="column">
+                                                        Donec nec justo eget felis facilisis fermentum. Aliquam
+                                                        porttitor mauris sit amet orci. Aenean dignissim pellentesque
+                                                        felis.
+
+                                                    </div>
+                                                    <div class="time secondary-text">4/21/17, 8:00 PM</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                                <!-- MESSAGE -->
+                                <div class="message-row" fxLayout="row">
+
+                                    <img src="assets/images/avatars/Josefina.jpg" class="avatar">
+
+                                    <div class="messsage-content">
+                                        <div class="user" fxLayout="row">
+                                            <div class="user-name mr-8">Martha Ramirez</div>
+                                            <div class="user-company mr-8">Customer Name</div>
+                                        </div>
+
+                                        <div class="bubble">
+                                            <div class="message" fxLayout="column">
+                                                Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris
+                                                sit amet orci. Aenean dignissim pellentesque felis.
+
+                                            </div>
+                                            <div class="time secondary-text">4/21/17, 8:00 PM</div>
+                                            <button mat-stroked-button color="accent" class="mt-8">Reply
+                                                comment</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="message-row" fxLayout="column">
+                                    <h2>New comment</h2>
+                                    <mat-form-field fxFlex="100" class="mx-4">
+                                        <mat-label>New comment</mat-label>
+                                        <textarea matInput appearance="standard" name="newcomment"
+                                            formControlName="newcomment" rows="5"></textarea>
+                                    </mat-form-field>
+                                </div>
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div fxLayout="column" fxFlex="100" fxFlex.gt-sm="30">
+
+                        <div class="mb-12"><button mat-raised-button color="accent">Approve Phase <mat-icon>
+                                    navigate_next</mat-icon></button></div>
+
+                        <mat-card class="card-mockup mb-8">
+                            <mat-card-header>
+                                <mat-card-title>Staging Pages</mat-card-title>
+                            </mat-card-header>
+
+
+                            <mat-card-content class="mb-0">
+                                <section class="mb-8">
+                                    <mat-card-subtitle>English</mat-card-subtitle>
+                                    <div class="card-content-row" fxLayout="column">
+                                        <div class="widgetmockup mr-12 mb-4">
+                                            <button mat-stroked-button color="accent" href="#" target="_blank" class="mr-4">Home</button>
+                                            <button mat-icon-button class="btn-remove-mockup" color="warn">
+                                                <mat-icon>close</mat-icon>
+                                            </button>
+                                        </div>
+                                        <div class="widgetmockup mr-12 mb-4">
+                                            <button mat-stroked-button color="accent" href="#" target="_blank" class="mr-4">Internal Page</button>
+                                            <button mat-icon-button class="btn-remove-mockup" color="warn">
+                                                <mat-icon>close</mat-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="mb-8">
+                                    <mat-card-subtitle>Spanish</mat-card-subtitle>
+                                    <div class="card-content-row" fxLayout="column">
+                                        <div class="widgetmockup mr-12 mb-4">
+                                            <button mat-stroked-button color="accent" href="#" target="_blank" class="mr-4">Home</button>
+                                            <button mat-icon-button class="btn-remove-mockup" color="warn">
+                                                <mat-icon>close</mat-icon>
+                                            </button>
+                                        </div>
+                                        <div class="widgetmockup mr-12 mb-4">
+                                            <button mat-stroked-button color="accent" href="#" target="_blank" class="mr-4">Internal Page</button>
+                                            <button mat-icon-button class="btn-remove-mockup" color="warn">
+                                                <mat-icon>close</mat-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                                <span class="card-last-update primary-200-fg"><mat-icon [inline]="true">access_time</mat-icon> Last update: 23/10/20 </span>
+
+                            </mat-card-content>
+
+
+
+
+                            <button mat-flat-button (click)="addstagingDialog()">
+                                <mat-icon>add</mat-icon> Add staging link
+                            </button>
+
+                        </mat-card>
+
+                        <mat-card class="card-mockup mb-8">
+                            <mat-card-header>
+                                <mat-card-title>Attachments</mat-card-title>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <section>
+                                    <div class="card-content-row">
+                                        <a mat-flat-button href="#" target="_blank">
+                                            <mat-icon>attach_file</mat-icon> doc.docx
+                                        </a>
+                                        <a mat-flat-button href="#" target="_blank">
+                                            <mat-icon>image</mat-icon> img.jpg
+                                        </a>
+                                        <a mat-flat-button href="#" target="_blank">
+                                            <mat-icon>picture_as_pdf</mat-icon> pdf.pdf
+                                        </a>
+                                        <a mat-flat-button href="#" target="_blank">
+                                            <mat-icon>audiotrack</mat-icon> audio.mp3
+                                        </a>
+                                        <a mat-flat-button href="#" target="_blank">
+                                            <mat-icon>attach_file</mat-icon> doc.docx
+                                        </a>
+                                    </div>
+                                </section>
+                            </mat-card-content>
+                        </mat-card>
+
+
+                        <mat-card class="card-stats mb-8">
+                            <mat-card-header>
+                                <mat-card-title class="mx-0">Summary</mat-card-title>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <section>
+                                    <div class="card-content-row">
+                                        <div class="title-project">
+                                            <h5 class="h5 m-0">INTEGRATIONS (WEBHOOKS, APIS, ETC.)</h5>
+                                        </div>
+                                        <div class="summary-task">
+                                            <div class="summary-task-title-task"> 1. Mock ups design</div>
+                                            <mat-progress-bar color="amber" mode="determinate" value="100">
+                                            </mat-progress-bar>
+                                        </div>
+                                        <div class="summary-task">
+                                            <div class="summary-task-title-task"> 2. Mock ups design</div>
+                                            <mat-progress-bar color="amber" mode="determinate" value="80">
+                                            </mat-progress-bar>
+                                        </div>
+                                        <a mat-flat-button target="_blank" class="mt-4">View Status Progress</a>
+
+                                    </div>
+                                </section>
+                            </mat-card-content>
+                        </mat-card>
+
+                        <mat-card class="card-mockup mb-8">
+                            <mat-card-header>
+                                <mat-card-title>Assigned Users</mat-card-title>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <section>
+                                    <div class="card-content-row" fxLayout="column">
+                                        <div class="user-assigned" fxLayout="row" fxLayout.lt-lg="row" fxFlex="100" fxFlex.lt-lg="100%" >
+                                            <div class="py-8" fxLayout="row" fxLayoutAlign="start center" fxFlex="60">
+                                                <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/jane.jpg">
+                                                <div class="ml-16">
+                                                    <div class="text-bold">Jane Rodriguez</div>
+                                                    <div class="h5 text-bold secondary-text">Customer</div>
+                                                </div>
+                                            </div>
+                                            <div class="py-8 mr-8" fxLayout="row" fxLayoutAlign="end center" fxFlex="60">
+                                                <mat-checkbox class="widget-notification primary-300-fg">Notif.</mat-checkbox>
+                                            </div>
+                                        </div>
+
+                                        <div class="user-assigned" fxLayout="row" fxLayout.lt-lg="row" fxFlex="100" fxFlex.lt-lg="100%" >
+                                            <div class="py-8" fxLayout="row" fxLayoutAlign="start center" fxFlex="60">
+                                                <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/james.jpg">
+                                                <div class="ml-16">
+                                                    <div class="text-bold">James Saavedra</div>
+                                                    <div class="h5 text-bold secondary-text">Customer</div>
+                                                </div>
+                                            </div>
+                                            <div class="py-8 mr-8" fxLayout="row" fxLayoutAlign="end center" fxFlex="60">
+                                                <mat-checkbox class="widget-notification primary-300-fg">Notif.</mat-checkbox>
+                                            </div>
+                                        </div>
+
+                                        <div class="user-assigned" fxLayout="row" fxLayout.lt-lg="row" fxFlex="100" fxFlex.lt-lg="100%" >
+                                            <div class="py-8" fxLayout="row" fxLayoutAlign="start center" fxFlex="60">
+                                                <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/Helen.jpg">
+                                                <div class="ml-16">
+                                                    <div class="text-bold">Helen Perez</div>
+                                                    <div class="h5 text-bold secondary-text">Team member</div>
+                                                </div>
+                                            </div>
+                                            <div class="py-8 mr-md-8" fxLayout="row" fxLayoutAlign="end center" fxFlex="60">
+                                                <mat-checkbox class="widget-notification primary-300-fg">Notif.</mat-checkbox>
+                                            </div>
+                                        </div>
+                                        <mat-card-actions class="mb-0" fxLayoutAlign="space-between center">
+                                            <button mat-button><mat-icon>supervised_user_circle</mat-icon> Manage Users</button>
+                                            <button mat-flat-button color="accent" class="mr-md-8">Save Changes</button>
+                                        </mat-card-actions>
+                                    </div>
+                                </section>
+                            </mat-card-content>
+                        </mat-card>
+
+                      
+
+
+
+                        <div class="card-content-row">
+
+                            <a mat-button color="accent" class="mx-auto" (click)="addwidgetDialog()">
+                                <mat-icon>add</mat-icon>Add new widget
+                            </a>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </mat-tab>
+
+            <mat-tab label="Launch">
+                <div class="card p-12 p-md-32" style="background:#f3f6f9" fxLayout.gt-sm="row" fxLayout="column">
+                    <div fxLayout="column"  class="pr-md-20">
+                        <h2 class="mb-16 mt-0 text-center  mx-auto"><b>Done! Your website is ready</b></h2>
+<div fxLayout="column" fxLayout.gt-sm="row" fxFlex="100" fxLayoutAlign="space-around start" >
+                <mat-card class="launch-card mx-8 mb-8" fxFlex="100" fxFlex.gt-sm="60">
+                    <mat-card-header>
+                      <mat-card-title>Desktop</mat-card-title>
+                      <mat-card-subtitle>https://www.orthonowcare.com/</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="http://localhost:4200/assets/images/launch/orthonow.png" alt="Screenshot">
+                    <!-- <mat-card-content>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur quasi quae vero natus ratione quisquam accusamus, enim earum repellat maiores magnam sapiente tempora placeat obcaecati. Consequatur sunt eaque ullam ea?</p>
+                    </mat-card-content> -->
+                    <mat-card-actions fxLayout="row" fxLayoutAlign="end center"> 
+                      <button mat-button color="warn">Report Issue</button>
+                      <button mat-button>Contact Support</button>
+                    </mat-card-actions>
+                  </mat-card>
+
+                  <mat-card class="launch-card mx-8 mb-8" fxFlex="100" fxFlex.gt-sm="20">
+                    <mat-card-header>
+                      <mat-card-title>Mobile</mat-card-title>
+                      <mat-card-subtitle>https://www.orthonowcare.com/</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="http://localhost:4200/assets/images/launch/mobile.png" alt="Screenshot">
+                    <!-- <mat-card-content>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur quasi quae vero natus ratione quisquam accusamus, enim earum repellat maiores magnam sapiente tempora placeat obcaecati. Consequatur sunt eaque ullam ea?</p>
+                    </mat-card-content> -->
+                    <mat-card-actions fxLayout="row" fxLayoutAlign="end center"> 
+                      <button mat-button color="warn">Report Issue</button>
+                      <button mat-button>Contact Support</button>
+                    </mat-card-actions>
+                  </mat-card>
+
+                </div>
+                  </div>
+                  </div>
+
+            </mat-tab>
+
+            <mat-tab label="Requirements">
+                <div class="card p-40" fxLayout="column">
+
+                    <div class="message-row" fxLayout="column">
+                        <h2>New comment</h2>
+                        <mat-form-field fxFlex="100" class="mx-4">
+                            <mat-label>New comment</mat-label>
+                            <textarea matInput appearance="standard" name="newcomment"
+                                formControlName="newcomment" rows="5"></textarea>
+                        </mat-form-field>
+                    </div>
+
+                    <!-- <h1 class="m-0">SPECIFICATIONS FOR WEBSITE TRANSLATION & ON PAGE SEO</h1>
+
+                    <h2>YOUR SPANISH WEBSITE:</h2>
+
+                    <div class="form-group" fxLayout="column"><label>Main Objective Of Your Spanish-Language Site? <span
+                                class="field-required">*</span></label> <label class="radio"><input type="checkbox">
+                            Select All</label> <label class="radio"><input type="checkbox" value="1"> To offer a better
+                            experience to our existing Hispanic customers</label><label class="radio"><input
+                                type="checkbox" value="2"> To generate new leads from Spanish-language customers</label>
+                    </div>
+
+                    <h3>BILINGUAL WEBSITES: WORDPRESS MULTISITE VS. WPML PLUG IN</h3>
+                    <ul>
+                        <li>Orci varius</li>
+                        <li>Magnis dis</li>
+                        <li>Conubia nostra</li>
+                        <li>Semper urna</li>
+                        <li>Donec viverra</li>
+                    </ul>
+
+                    <h2>DOMAIN. KEYWORDS. COMPETITORS.</h2>
+
+                    <h2>TARGET AUDIENCE. METRICS. SPANISH MARKETING.</h2> -->
+                </div>
+            </mat-tab>
+
+        </mat-tab-group>
+
+    </div>
+
+</div>

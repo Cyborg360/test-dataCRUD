@@ -1,0 +1,306 @@
+<div class="dialog-content-wrapper mockup-view-dialog">
+    <mat-toolbar class="mat-accent m-0">
+        <mat-toolbar-row fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="title dialog-title">Project Mockup Desktop | Home</span>
+            <button mat-icon-button (click)="matDialogRef.close()" aria-label="Close dialog">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div mat-dialog-content class="p-16 m-0" style="max-height: 100%!important; overflow: auto">
+
+        <div fxLayout="row" fxLayoutAlign="space-between start" fxFlex="100"> 
+            <div fxFlex="70" fxLayoutAlign="space-around center" class="pr-16" style="height: 100%;">
+ 
+                <div class="container-iframe">
+                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/2MpUj-Aua48"></iframe>
+                  </div>
+
+            </div>
+            <div fxFlex="30" style="height: 100%!important; overflow: auto">
+
+                <mat-accordion class="mb-8">
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Notes
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <p><strong>Hi BHS Team!</strong></p>
+                      <p>Please watch this video explaining some of the changes proposed for www.drbadia.com, many of which we went over already with Susan I. and Kate S.</p>
+                      <p>Feel free to provide further comments, if any, by clicking on the red "Request changes" button below. If no further changes are needed, we will create the staging page and go live after final approved.</p>
+                      <p>Sincerely Yours, Sebastian</p>
+
+                      <div class="container-iframe">
+                        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/2MpUj-Aua48"></iframe>
+                      </div>
+                    </mat-expansion-panel>
+
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Any Feedback?
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <div class="message-row" fxLayout="column">
+                    <mat-form-field fxFlex="100" class="mx-4">
+                        <mat-label>New comment</mat-label>
+                        <textarea matInput appearance="standard" name="newcomment" formControlName="newcomment" rows="5"></textarea>
+                    </mat-form-field>
+                    </div>  
+                    </mat-expansion-panel>
+                  </mat-accordion>
+
+
+                <div class="mockups-approved mt-12">
+                    <mat-tab-group>
+                        <mat-tab label="Pending"> 
+                            <h3><b>Desktop</b></h3>    
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="py-8">
+                                <a mat-flat-button href="#" target="_blank" fxFlex="60">
+                                    <div fxLayout="column" fxFlex="25" fxLayoutAlign="space-around center" >
+                                        <mat-icon>desktop_windows</mat-icon>
+                                    </div>
+                                    <div fxLayout="column" fxFlex="75" class="item-page-type pl-8" fxLayoutAlign="center start">
+                                        <span><b>Home</b></span>
+                                        <span>English</span>
+                                    </div>
+                                </a>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <a mat-flat-button href="#" target="_blank" class="green-600">
+                                        <mat-icon>check</mat-icon> Approve
+                                    </a>
+                                </div>
+                            </div>
+
+                            <mat-divider></mat-divider>
+
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="py-8">
+                                <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center" >
+                                    <mat-icon>desktop_windows</mat-icon>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <span><b>Category</b></span>
+                                    <span>English</span>
+                                </div>
+
+                                <mat-divider></mat-divider>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <a mat-flat-button href="#" target="_blank" class="green-600">
+                                        <mat-icon>check</mat-icon> Approve
+                                    </a>
+                                </div>
+                            </div>
+
+                            <mat-divider></mat-divider>
+
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="py-8">
+                                <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center" >
+                                    <mat-icon>desktop_windows</mat-icon>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <span><b>Page</b></span>
+                                    <span>English</span>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <a mat-flat-button href="#" target="_blank" class="green-600">
+                                        <mat-icon>check</mat-icon> Approve
+                                    </a>
+                                </div>
+                            </div>
+
+                            
+
+
+                            <h3><b>Mobile</b></h3>    
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="py-8">
+                                <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center" >
+                                    <mat-icon>smartphone</mat-icon>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <span><b>Home</b></span>
+                                    <span>English</span>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <a mat-flat-button href="#" target="_blank" class="green-600">
+                                        <mat-icon>check</mat-icon> Approve
+                                    </a>
+                                </div>
+                            </div>
+
+                            <mat-divider></mat-divider>
+                            
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="py-8">
+                                <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center" >
+                                    <mat-icon>smartphone</mat-icon>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <span><b>Category</b></span>
+                                    <span>English</span>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <a mat-flat-button href="#" target="_blank" class="green-600">
+                                        <mat-icon>check</mat-icon> Approve
+                                    </a>
+                                </div>
+                            </div>
+
+                            <mat-divider></mat-divider>
+
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="py-8">
+                                <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center" >
+                                    <mat-icon>smartphone</mat-icon>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <span><b>Page</b></span>
+                                    <span>English</span>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <a mat-flat-button href="#" target="_blank" class="green-600">
+                                        <mat-icon>check</mat-icon> Approve
+                                    </a>
+                                </div>
+                            </div>
+
+                        </mat-tab>
+                        <mat-tab label="Approved">
+
+                            <h3><b>Desktop</b></h3>    
+
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="py-8">
+                                <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center" >
+                                    <mat-icon>desktop_windows</mat-icon>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <span><b>Home</b></span>
+                                    <span>English</span>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <a mat-stroked-button href="#" target="_blank" class="approved-btn">
+                                        <mat-icon>check</mat-icon> Approved
+                                    </a>
+                                </div>
+                            </div>
+
+                            <mat-divider></mat-divider>
+
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="py-8">
+                                <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center" >
+                                    <mat-icon>desktop_windows</mat-icon>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <span><b>Category</b></span>
+                                    <span>English</span>
+                                </div>
+
+                                <mat-divider></mat-divider>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <a mat-stroked-button href="#" target="_blank" class="approved-btn">
+                                        <mat-icon>check</mat-icon> Approved
+                                    </a>
+                                </div>
+                            </div>
+
+                            <mat-divider></mat-divider>
+
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="py-8">
+                                <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center" >
+                                    <mat-icon>desktop_windows</mat-icon>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <span><b>Page</b></span>
+                                    <span>English</span>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <a mat-stroked-button href="#" target="_blank" class="approved-btn">
+                                        <mat-icon>check</mat-icon> Approved
+                                    </a>
+                                </div>
+                            </div>
+
+                            
+
+
+                            <h3><b>Mobile</b></h3>    
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="py-8">
+                                <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center" >
+                                    <mat-icon>smartphone</mat-icon>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <span><b>Home</b></span>
+                                    <span>English</span>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <a mat-stroked-button href="#" target="_blank" class="approved-btn">
+                                        <mat-icon>check</mat-icon> Approved
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <mat-divider></mat-divider>
+
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="py-8">
+                                <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center" >
+                                    <mat-icon>smartphone</mat-icon>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <span><b>Category</b></span>
+                                    <span>English</span>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <a mat-stroked-button href="#" target="_blank" class="approved-btn">
+                                        <mat-icon>check</mat-icon> Approved
+                                    </a>
+                                </div>
+                            </div>
+
+                            <mat-divider></mat-divider>
+
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="py-8">
+                                <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center" >
+                                    <mat-icon>smartphone</mat-icon>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <span><b>Page</b></span>
+                                    <span>English</span>
+                                </div>
+
+                                <div fxLayout="column" fxFlex="40">
+                                    <a mat-stroked-button href="#" target="_blank" class="approved-btn">
+                                        <mat-icon>check</mat-icon> Approved
+                                    </a>
+                                </div>
+                            </div>
+
+                        </mat-tab>
+                      </mat-tab-group>
+                </div>
+            </div>
+        </div>          
+        
+    </div>
+
+</div>

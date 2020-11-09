@@ -1,0 +1,140 @@
+<div class="dialog-content-wrapper">
+    <mat-toolbar class="mat-accent m-0">
+        <mat-toolbar-row fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="title dialog-title">Create a new Task</span>
+            <button mat-icon-button (click)="matDialogRef.close()" aria-label="Close dialog">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div mat-dialog-content class="p-24 pb-8 m-0" fusePerfectScrollbar>
+
+        <form name="composeForm" [formGroup]="composeForm" class="compose-form" fxLayout="column" fxFlex="100">
+
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" fxLayoutGap>
+            <mat-form-field appearance="outline" fxFlex="50" class="mx-4">
+                <mat-label>Customer Name</mat-label>
+                <input matInput name="customername"
+                       formControlName="customername">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" fxFlex="50" class="mx-4">
+                <mat-label>Project Name</mat-label>
+                <input matInput name="projectname"
+                       formControlName="projectname">
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="column" fxLayoutAlign="space-between center" fxFlex="100" fxLayoutGap>
+
+
+
+
+            <mat-form-field appearance="outline" fxFlex="100" class="mx-4">
+                <mat-label>Task</mat-label>
+                <mat-select>
+                    <mat-option value="option">Create a new Task</mat-option>
+                    <mat-option value="option">Task template 1</mat-option>
+                    <mat-option value="option">Task template 2</mat-option>
+                    <mat-option value="option">Task template 3</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="outline" fxFlex="100" class="mx-4">
+                <mat-label>Task Name</mat-label>
+                <input matInput name="taskname"
+                       formControlName="taskname">
+            </mat-form-field>
+        </div>
+
+
+        <div fxLayout="row" fxLayoutAlign="start center" fxFlex="100" fxLayoutGap>
+
+
+                <mat-form-field appearance="outline" fxFlex="30" class="mx-4">
+                    <mat-label>Assigned User</mat-label>
+                    <mat-select [formControl]="userstask" multiple>
+                      <mat-option *ngFor="let userstask of userstaskList" [value]="userstask">{{userstask}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                
+                <mat-form-field appearance="outline" fxFlex="30" class="mx-4">
+                    <mat-label>Priority (Optional)</mat-label>
+                    <mat-select>
+                        <mat-option value="option">(no set)</mat-option>
+                        <mat-option value="option">High</mat-option>
+                        <mat-option value="option">Medium</mat-option>
+                        <mat-option value="option">Low</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" fxFlex="20" class="mx-4">
+                    <mat-label>Est. Dur. Hours (Optional)</mat-label>
+                    <input matInput name="url-optional"
+                           formControlName="url-optional"
+                           type="number"
+                           id="myNumber">
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" fxFlex="20" class="mx-4">
+                    <mat-label>Est. Dur. Minutes (Optional)</mat-label>
+                    <input matInput name="url-optional"
+                           formControlName="url-optional"
+                           type="number"
+                           id="myNumber">
+                </mat-form-field>
+            </div>
+
+
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" fxLayoutGap>
+
+            <mat-form-field color="accent" appearance="outline" fxFlex="50" class="mx-4">
+                <mat-label>Start Date - ESD (Optional)</mat-label>
+                <input matInput [matDatepicker]="estimedstartdate">
+                <mat-datepicker-toggle matSuffix [for]="estimedstartdate"></mat-datepicker-toggle>
+                <mat-datepicker #estimedstartdate></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field color="accent" appearance="outline" fxFlex="50" class="mx-4">
+                <mat-label>End Date - ECD</mat-label>
+                <input matInput [matDatepicker]="picker1">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>      
+
+            <mat-form-field appearance="outline" fxFlex="20" class="mx-4">
+                <mat-label>Progress %</mat-label>
+                <input matInput name="progress"
+                       formControlName="progress"
+                       type="number">
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" fxLayoutGap>
+
+            <mat-form-field appearance="outline" fxFlex="100" class="mx-4">
+                <mat-label>Internal Note (Optional)</mat-label>
+                <textarea matInput name="internalnote" formControlName="internalnote" rows="2"></textarea>
+            </mat-form-field>
+        </div>
+
+
+        </form>
+    </div>
+
+    <div mat-dialog-actions class="m-0 px-28 mb-16 mt-8" fxLayout="row" fxLayoutAlign="space-between center">
+            <button mat-raised-button
+                    color="accent"
+                    (click)="matDialogRef.close(['send',composeForm])"
+                    class="save-button"
+                    [disabled]="composeForm.invalid"
+                    aria-label="CREATE TASK">
+                CREATE TASK
+            </button>
+
+            <mat-checkbox class="sendnotificationtask" checked>Send Notification</mat-checkbox>
+    </div>
+</div>

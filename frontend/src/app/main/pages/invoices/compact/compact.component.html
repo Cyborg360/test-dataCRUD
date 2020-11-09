@@ -1,0 +1,364 @@
+<div fxLayout="column">
+<div id="invoice" class="compact page-layout summary accent" fxLayout="row">
+
+  <div class="header accent p-24 h-132 w-100-p" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row"
+  fxLayoutAlign.gt-xs="space-between center">
+
+ <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start" fxFlex="50%">
+
+    <div class="h1 mt-16 my-4">Your Website Needs Analysis</div>
+
+    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="100%">
+    
+      <mat-form-field appearance="fill" class="mr-8">
+        <mat-label>Client</mat-label>
+        <mat-select>
+          <mat-option value="option1">Client 01</mat-option>
+          <mat-option value="option3">Client 02</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>URL</mat-label>
+        <mat-select>
+          <mat-option value="option1">www.hispanicmarketadvisors.com</mat-option>
+          <mat-option value="option3">www.hispanicmarketadvisors.com</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </div>
+
+
+ </div>
+
+  <div>
+    <a mat-raised-button class="reference-button mt-16 mt-sm-0 mr-8" href="https://material.angular.io/components/categories"
+        target="_blank">
+        <mat-icon class="mr-8">send</mat-icon>
+        <span>Send Notification</span>
+    </a>
+
+    <a mat-raised-button class="reference-button mt-16 mt-sm-0" href="https://material.angular.io/components/categories"
+        target="_blank">
+        <mat-icon class="mr-8">picture_as_pdf</mat-icon>
+        <span>Download PDF</span>
+    </a>
+  </div>
+
+</div>
+
+</div>
+
+
+<div class="px-24 py-12 fuse-white-bg" fxLayout="column">
+
+  <div class="description primary-300-fg mb-20 mt-16">
+    The purposed of this needs analysis is to identify, evaluate and review the needs of your website <b>https://www.hispanicmarketadvisors.com/</b> This
+    report highlights the gap between your current and expected performance levels and is intended for opening a
+    conversation between Hispanic Market Advisors® and your company to offer you solutions that directly address those
+    needs.
+  </div>
+
+
+
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <h3 class="primary--fg h2"><strong>SCALE for EACH OPPORTUNITY and SUGGESTED PRIORITY LEVEL</strong></h3>
+    <a href="#" mat-flat-button color="primary"><mat-icon class="mr-4">add </mat-icon>Create a New Analysis</a>
+  </div>
+
+  <div class="mat-elevation-z8 mb-20" fxFlex="100">
+    <table mat-table [dataSource]="dataSource" class="table-information w-100-p">
+  
+      <ng-container matColumnDef="reportType">
+        <th mat-header-cell *matHeaderCellDef> Report Type </th>
+        <td mat-cell *matCellDef="let element"><span fxLayoutAlign="start center"><mat-icon color="warn" class="mr-4">warning</mat-icon> {{element.reportType}}</span></td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="performance">
+        <th mat-header-cell *matHeaderCellDef> Current Performance</th>
+        <td mat-cell *matCellDef="let element"> <span
+            fxLayoutAlign="start center w-100-p text-center">{{element.performance}}</span></td>
+      </ng-container>
+  
+      <!-- desiredPerformances Column -->
+      <ng-container matColumnDef="actionrequired">
+        <th mat-header-cell *matHeaderCellDef> Action(s) Required? </th>
+        <td mat-cell *matCellDef="let element"> <span
+            fxLayoutAlign="start center w-100-p text-center">{{element.actionrequired}}</span></td>
+      </ng-container>
+  
+      <!-- desiredPerformances Column -->
+      <ng-container matColumnDef="desiredPerformance">
+        <th mat-header-cell *matHeaderCellDef> Desired Performance </th>
+        <td mat-cell *matCellDef="let element"> <span
+            fxLayoutAlign="start center w-100-p text-center">{{element.desiredPerformance}}</span></td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="priority">
+        <th mat-header-cell *matHeaderCellDef> Priority Level </th>
+        <td mat-cell *matCellDef="let element"> {{element.priority}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="interested">
+        <th mat-header-cell *matHeaderCellDef> Want to learn more?</th>
+        <td mat-cell *matCellDef="let element"> <!--{{element.interested}}--></td> 
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+  
+  </div>
+</div>
+
+
+<mat-tab-group mat-align-tabs="start" class="fuse-white-bg"> 
+  <mat-tab label="Diagnostic">
+
+    <div class="px-24 py-20" fxLayout="row wrap" fxLayoutAlign="start start" fxFlex="100">
+      <mat-card class="service-card" fxFlex="32" class="mx-8 mb-20">
+      <mat-card-title fxLayoutAlign="start center"> <mat-icon class="mr-8">shutter_speed</mat-icon> PageSpeed Insights by Google</mat-card-title>
+      <mat-card-content fxLayout="row wrap">
+    
+        <div class="px-16" fxFlex="49" fxLayout="column" fxLayoutAlign="start center">
+          <div class="h4 secondary-text">Mobile</div>
+          <div class="mat-display-1 mb-0 py-8">75 / 100</div>
+          <div fxLayout="row" fxLayoutAlign="center center">
+              <mat-icon class="s-18 pr-4 amber-800-fg">
+                warning
+              </mat-icon>
+    
+              <div class="h5 amber-800-fg">
+                Needs Improvement
+              </div>
+          </div>
+      </div>
+    
+      <div class="px-16" fxFlex="49" fxLayout="column" fxLayoutAlign="start center">
+        <div class="h4 secondary-text">Desktop</div>
+        <div class="mat-display-1 mb-0 py-8">90 / 100</div>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <mat-icon class="s-18 pr-4 green-fg">
+                check
+            </mat-icon>
+    
+            <div class="h5 green-fg">
+                Good
+            </div>
+        </div>
+    </div>
+    
+     <div fxFlex="100">
+        <p class="px-4 small mb-0">
+          Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in.
+        </p>
+      </div>
+    
+      </mat-card-content>
+      <mat-card-actions fxLayout="column">
+        <div fxLayout="row wrap" class="mb-8">
+        <button mat-button class="green-600 mr-4" fxFlex="100">Mark if interested</button>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <button mat-stroked-button fxFlex="49">Ask a question</button>
+        <button mat-stroked-button fxFlex="49">Not interested</button>
+      </div>
+      </mat-card-actions>
+      </mat-card>
+    
+    
+    
+    
+      <mat-card class="service-card" fxFlex="32" class="mx-8 mb-20">
+        <mat-card-title fxLayoutAlign="start center"> <mat-icon class="mr-8">mobile_friendly</mat-icon> Mobile Friendliness</mat-card-title>
+        <mat-card-content class="my-20" fxLayout="column">
+        <span class="h5 primary-200-fg mb-8">Tested on: Oct 18, 2020 at 3:56 PM</span>
+          <span class="h1 green-fg my-8"><mat-icon>check</mat-icon> Page is mobile friendly</span>
+          <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    
+        </mat-card-content>
+        <mat-card-actions fxLayout="row wrap">
+          <button mat-stroked-button fxFlex="100">Ask a question</button>
+        </mat-card-actions>
+        </mat-card>
+    
+    
+        <mat-card class="service-card" fxFlex="32" class="mx-8 mb-20">
+          <mat-card-title fxLayoutAlign="start center"> <mat-icon class="mr-8">web</mat-icon> Site Audit (Errors & Warnings)</mat-card-title>
+          <mat-card-content fxLayout="column">
+    
+            <!-- <div class="h-200">
+    
+          </div> -->
+          <div class="p-16" fxLayout="row" fxLayoutAlign="center center">
+    
+          <span class="h2"> Site Health</span>
+    
+          </div>
+    
+          <div class="p-16" fxLayout="row" fxLayoutAlign="center center">
+              <div class="px-16" fxLayout="column" fxLayoutAlign="start center">
+                  <div class="h4 secondary-text">Errors</div>
+                  <div class="h2 font-weight-300 py-8">15</div>
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                      <mat-icon class="s-18 pr-4 red-fg">
+                        error
+                      </mat-icon>
+    
+                      <div class="h5 red-fg">
+                          +49
+                      </div>
+                  </div>
+              </div>
+    
+              <div class="px-16" fxLayout="column" fxLayoutAlign="start center">
+                  <div class="h4 secondary-text">Warnings</div>
+                  <div class="h2 font-weight-300 py-8">123</div>
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                      <mat-icon class="s-18 pr-4 orange-fg">
+                        warning
+                      </mat-icon>
+    
+                      <div class="h5 orange-fg">
+                          +49
+                      </div>
+                  </div>
+              </div>
+    
+              <div class="px-16" fxLayout="column" fxLayoutAlign="start center">
+                  <div class="h4 secondary-text">Notices</div>
+                  <div class="h2 font-weight-300 py-8">2760</div>
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                      <mat-icon class="s-18 pr-4 red-fg">
+                        error
+                      </mat-icon>
+    
+                      <div class="h5 red-fg">
+                          +54
+                      </div>
+                  </div>
+              </div>
+          </div>
+    
+          </mat-card-content>
+          <mat-card-actions fxLayout="column">
+            <div fxLayout="row wrap" class="mb-8">
+            <button mat-button class="green-600 mr-4" fxFlex="100">Mark if interested</button>
+          </div>
+          <div fxLayout="row" fxLayoutAlign="space-between center">
+            <button mat-stroked-button fxFlex="49">Ask a question</button>
+            <button mat-stroked-button fxFlex="49">Not interested</button>
+          </div>
+          </mat-card-actions>
+          </mat-card>
+    
+          <mat-card class="service-card" fxFlex="32" class="mx-8 mb-20">
+            <mat-card-title fxLayoutAlign="start center"> <mat-icon class="mr-8">language</mat-icon> Spanish-Language Opportunity</mat-card-title>
+            <mat-card-content fxLayout="column">
+              <p>Based on your geographic area or target market, a Spanish-language version of your site can help expand your business.</p>
+            
+              <table class="simple clickable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="text-right">2020 Population</th>
+                        <th class="text-right">Share increment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hispanic</td>
+                        <td class="text-right">3621</td>
+                        <td class="text-right"><b>90%</b></td>
+                    </tr>
+                    <tr>
+                        <td>Asian</td>
+                        <td class="text-right">703</td>
+                        <td class="text-right"><b>90%</b></td>
+                    </tr>
+                    <tr>
+                        <td>Black</td>
+                        <td class="text-right">532</td>
+                        <td class="text-right"><b>90%</b></td>
+                    </tr>
+                    <tr>
+                        <td>White</td>
+                        <td class="text-right">201</td>
+                        <td class="text-right"><b>90%</b></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p class="small">Note: Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim deserunt est facilis temporibus nostrum ad delectus, natus, dolorem cum numquam corporis similique itaque sed, quis dolores modi omnis distinctio iste!</p>
+    
+            </mat-card-content>
+            <mat-card-actions fxLayout="column">
+              <div fxLayout="row wrap" class="mb-8">
+              <button mat-button class="green-600 mr-4" fxFlex="100">Mark if interested</button>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+              <button mat-stroked-button fxFlex="49">Ask a question</button>
+              <button mat-stroked-button fxFlex="49">Not interested</button>
+            </div>
+            </mat-card-actions>
+            </mat-card>
+    
+            <mat-card class="service-card" fxFlex="32" class="mx-8 mb-20">
+              <mat-card-title fxLayoutAlign="start center"> <mat-icon class="mr-8">queue</mat-icon> Content Development for Your Website</mat-card-title>
+              <mat-card-content fxLayout="column">
+                <p>Based on your geographic area or target market, a Spanish-language version of your site can help expand your business.</p>
+              </mat-card-content>
+              <mat-card-actions fxLayout="column">
+                <div fxLayout="row wrap" class="mb-8">
+                <button mat-button class="green-600 mr-4" fxFlex="100">Mark if interested</button>
+              </div>
+              <div fxLayout="row" fxLayoutAlign="space-between center">
+                <button mat-stroked-button fxFlex="49">Ask a question</button>
+                <button mat-stroked-button fxFlex="49">Not interested</button>
+              </div>
+              </mat-card-actions>
+              </mat-card>
+    
+              <!-- <mat-card class="service-card add-new-card-box mx-8 mb-20" fxFlex="32">
+                <mat-card-content fxLayout="column" fxLayoutAlign="space-around center" class="h-200">
+                  <div class="text-center" fxLayout="column" fxLayoutAlign="center center">
+                    <mat-icon class="mat-display-3 w-100-p mb-28">add_circle_outline</mat-icon> 
+                    <p class="small">Add new widget.</p>
+                </div>
+                </mat-card-content>
+                </mat-card> -->
+    </div>
+
+  </mat-tab>
+  <mat-tab label="Messages"></mat-tab>
+</mat-tab-group>
+
+<div class="content-detail pt-12" fxLayout="row wrap">
+
+
+
+
+
+
+
+
+
+<div class="px-24 py-20 h-80 mb-32 primary-200-fg" fxLayout="row" fxLayoutAlign="center center"  fxFlex="100">
+  <mat-icon class="mr-8">access_time</mat-icon> Needs analysis generated on October 11, 2020
+</div>
+
+
+<div class="px-24 py-20 primary-500" fxLayout="row wrap" fxLayoutAlign="start start" fxFlex="100">
+  <h2>Summary</h2>
+  <p class="mb-20">From the table in the introductory section, please check the areas that you are interested to discuss. Selecting all areas does not enter your company in any contract or obligation with Hispanic Market Advisors®. It is just a tool for us to gage your interest in our solutions to address your needs. Once we receive your feedback, we will prepare a preliminary proposal based on your needs. That proposal will include more details so that it helps you better decide. If that proposal is approved, you will then receive a professional service agreement so that we can start the work at the designated starting date. On behalf of the entire Hispanic Market Advisors® Team, we hope we can become part of your extended marketing team to help you expand your digital footprint and expand your business.</p>
+
+
+
+</div>
+
+
+</div>  
