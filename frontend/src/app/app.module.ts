@@ -23,6 +23,11 @@ import { LayoutModule } from 'app/layout/layout.module';
 const appRoutes: Routes = [
     {
         path        : 'apps',
+        loadChildren: () => import('./main/apps/apps.module').then(m => m.AppsModule),
+        
+    },
+    {
+        path        : '',
         loadChildren: () => import('./main/apps/apps.module').then(m => m.AppsModule)
     }
 ];
