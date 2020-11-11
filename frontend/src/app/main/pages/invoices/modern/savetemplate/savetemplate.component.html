@@ -1,0 +1,154 @@
+<div class="dialog-content-wrapper">
+    <mat-toolbar class="mat-accent m-0">
+        <mat-toolbar-row fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="title dialog-title">Save As Template</span>
+            <button mat-icon-button (click)="matDialogRef.close()" aria-label="Close dialog">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div mat-dialog-content class="p-16 m-0">
+
+        <form name="composeForm" [formGroup]="composeForm" class="compose-form" fxLayout="column" fxFlex="100">
+
+        <div fxLayout="column" fxLayoutAlign="space-between center" fxFlex="100" fxLayoutGap>
+
+            <mat-form-field appearance="outline" fxFlex="50" class="mr-4">
+                <mat-label>Template Task Name</mat-label>
+                <mat-select>
+                    <mat-option value="option">--Create as a new template--</mat-option>
+                    <mat-option value="option">Template Task 01</mat-option>
+                    <mat-option value="option">Template Task 02</mat-option>
+                    <mat-option value="option">Template Task 03</mat-option>
+                    <mat-option value="option">Template Task 04</mat-option>
+                    <mat-option value="option">Template Task 05</mat-option>
+                </mat-select>
+            </mat-form-field> 
+
+            <mat-form-field appearance="outline" fxFlex="100" class="mx-4">
+                <mat-label>Name</mat-label>
+                <input matInput name="tasktemplatename"
+                       formControlName="tasktemplatename">
+            </mat-form-field>
+
+
+       
+        </div>
+
+
+
+
+<div fxLayout="column">
+
+
+<mat-card class="preview-card-template mt-8" style="background-color: #f3f7ff;">
+    <mat-card-header>
+      <mat-card-title>Preview</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <table class="table-project-preview w-100-p">
+
+            <thead>
+                <tr>
+                    <th fxFlex="40" fxLayoutAlign="start center">
+                        1. Mock ups design
+                    </th>
+                    <th fxFlex="60" fxLayout="column" fxLayoutAlign="center start">
+                        <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+                    </th>
+                </tr>
+            </thead>
+            <tbody cdkDropList class="list">
+                <tr class="box" cdkDrag>
+                    <td fxFlex="40" class="pr-20">
+                        <div class="title">
+                            <span class="name-task">Subtask 1</span>
+                        </div>
+                    </td>
+        
+                    <td fxFlex="60" fxLayout="column" fxLayoutAlign="center start">
+                        <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+                        <span>0%</span>
+                    </td>
+                </tr>
+        
+        
+                <tr class="box" cdkDrag>
+                    <td fxFlex="40" class="pr-20">
+                        <div class="title">
+                            <span class="name-task">Subtask 2</span>
+                            <button mat-icon-button class="primary-400-fg"
+                                matTooltip="Note available" aria-label="Note available">
+                                <mat-icon>bookmark</mat-icon>
+                            </button>
+        
+                        </div>
+                    </td>
+        
+                    <td fxFlex="60" fxLayout="column" fxLayoutAlign="center start">
+                        <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+                        <span>0%</span>
+                    </td>
+                </tr>
+        
+                <tr class="box" cdkDrag>
+                    <td fxFlex="40" class="pr-20">
+                        <div class="title">
+                            <span class="name-task">Subtask 3</span>
+                        </div>
+                    </td>
+        
+                    <td fxFlex="60" fxLayout="column" fxLayoutAlign="center start">
+                        <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+                        <span>0%</span>
+                    </td>
+                </tr>
+        
+                <tr class="box" cdkDrag>
+                    <td fxFlex="40" class="pr-20">
+                        <div class="title">
+                            <span class="name-task">Subtask 4</span>
+                            <button mat-icon-button class="primary-400-fg"
+                                matTooltip="Note available" aria-label="Note available">
+                                <mat-icon>bookmark</mat-icon>
+                            </button>
+                        </div>
+        
+        
+                    </td>
+        
+                    <td fxFlex="60" fxLayout="column" fxLayoutAlign="center start">
+                        <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+                        <span>0%</span>
+                    </td>
+        
+                </tr>
+        
+            </tbody>
+        </table>
+    </mat-card-content>
+  </mat-card>
+    
+</div>
+
+
+
+
+        </form>
+    </div>
+
+    <div mat-dialog-actions class="m-0 p-16 pt-0" fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100">
+        <div>
+            <button mat-raised-button
+                    color="accent"
+                    (click)="matDialogRef.close(['send',composeForm])"
+                    class="save-button"
+                    [disabled]="composeForm.invalid"
+                    aria-label="Save As Template">
+                    Save As Template
+            </button>
+
+        </div>
+    </div>
+</div>

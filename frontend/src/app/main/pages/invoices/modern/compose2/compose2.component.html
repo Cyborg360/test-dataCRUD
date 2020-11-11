@@ -1,0 +1,47 @@
+<div class="dialog-content-wrapper">
+    <mat-toolbar class="mat-accent m-0">
+        <mat-toolbar-row fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="title dialog-title">Name Task | Note</span>
+            <button mat-icon-button (click)="matDialogRef.close()" aria-label="Close dialog">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div mat-dialog-content class="p-16 m-0">
+<p class="mt-0" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+<p><strong>Nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. </strong></p>
+<ul>
+    <li>Donec nec justo eget felis facilisis fermentum.</li>
+    <li>Aliquam porttitor mauris sit amet orci.</li>
+    <li><a href="#">Dignissim pellentesque felis</a></li>
+</ul>
+
+<img src="/assets/images/cards/card1.jpg" alt="Image">
+
+
+    </div>
+
+
+
+    <div mat-dialog-actions class="m-0 p-16" fxLayout="row" fxLayoutAlign="space-between center">
+        <div>
+            <button mat-raised-button
+                    color="accent"
+                    (click)="matDialogRef.close(['send',composeForm])"
+                    class="save-button mr-4"
+                    [disabled]="composeForm.invalid"
+                    aria-label="SAVE">
+                CLOSE
+            </button>
+            <button mat-raised-button
+                    color="primary"
+                    class="edit-button"
+                    [disabled]="composeForm.invalid"
+                    aria-label="EDIT">
+                EDIT
+            </button>
+        </div>
+    </div>
+
+</div>

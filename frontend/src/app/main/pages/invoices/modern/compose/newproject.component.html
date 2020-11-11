@@ -1,0 +1,345 @@
+<div class="dialog-content-wrapper">
+    <mat-toolbar class="mat-accent m-0">
+        <mat-toolbar-row fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="title dialog-title">Create a new project</span>
+            <button mat-icon-button (click)="matDialogRef.close()" aria-label="Close dialog">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div mat-dialog-content class="px-16 px-12 m-0">
+
+        <mat-tab-group>
+            <mat-tab label="Basic">
+                <form name="composeForm" [formGroup]="composeForm" class="compose-form" fxLayout="column" fxFlex="100">
+
+                    <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" fxLayoutGap>
+                        <mat-form-field appearance="outline" fxFlex="50" class="mx-4">
+                            <mat-label>Customer Name</mat-label>
+                            <input matInput name="customername"
+                                   formControlName="customername">
+                        </mat-form-field>
+            
+                        <mat-form-field appearance="outline" fxFlex="50" class="mx-4">
+                            <mat-label>Project Name</mat-label>
+                            <input matInput name="projectname"
+                                   formControlName="projectname">
+                        </mat-form-field>
+                    </div>
+            
+            
+                    <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" fxLayoutGap>
+            
+                        <mat-form-field color="accent" appearance="outline" fxFlex="50" class="mx-4">
+                            <mat-label>Estimated Start Date - ESD (Optional)</mat-label>
+                            <input matInput [matDatepicker]="estimedstartdate">
+                            <mat-datepicker-toggle matSuffix [for]="estimedstartdate"></mat-datepicker-toggle>
+                            <mat-datepicker #estimedstartdate></mat-datepicker>
+                        </mat-form-field>
+            
+                        <mat-form-field color="accent" appearance="outline" fxFlex="50" class="mx-4">
+                            <mat-label>Estimated Completion Date - ECD</mat-label>
+                            <input matInput [matDatepicker]="picker1">
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field>      
+                    </div>
+            
+                    <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" fxLayoutGap>
+                        <mat-form-field appearance="outline" fxFlex="50" class="mx-4">
+                            <mat-label>Project Type</mat-label>
+                            <mat-select>
+                                <mat-option value="option">Custom</mat-option>
+                                <mat-option value="option">Responsive Website Development</mat-option>
+                                <mat-option value="option">Responsive Landing Page Development</mat-option>
+                                <mat-option value="option">Website Translation and On-Page SEO</mat-option>
+                                <mat-option value="option">General Project (Custom)</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+            
+                        <mat-form-field appearance="outline" fxFlex="50" class="mx-4">
+                            <mat-label>Project Template (Optional)</mat-label>
+                            <mat-select>
+                                <mat-option value="option">Default</mat-option>
+                                <mat-option value="option">Responsive Website Conversion</mat-option>
+                                <mat-option value="option">Non-Responsive WordPress to Responsive WordPress Theme</mat-option>
+                                <mat-option value="option">HTML/PHP Conversion to Responsive WordPress</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+            
+                    <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" fxLayoutGap>
+            
+                        <mat-form-field appearance="outline" fxFlex="50" class="mx-4">
+                            <mat-label>URL (Optional)</mat-label>
+                            <input matInput name="url-optional"
+                                   formControlName="url-optional">
+                        </mat-form-field>
+                        
+                        <mat-form-field appearance="outline" fxFlex="50" class="mx-4">
+                            <mat-label>Priority (Optional)</mat-label>
+                            <mat-select>
+                                <mat-option value="option">(no set)</mat-option>
+                                <mat-option value="option">High</mat-option>
+                                <mat-option value="option">Medium</mat-option>
+                                <mat-option value="option">Low</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        </div>
+            
+            
+                        <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" fxLayoutGap>
+            
+                
+                        <mat-form-field appearance="outline" fxFlex="50" class="mx-4">
+                            <mat-label>Staging User (Optional)</mat-label>
+                            <input matInput name="staging-user"
+                                   formControlName="staging-user">
+                        </mat-form-field>
+            
+                        <mat-form-field appearance="outline" fxFlex="50" class="mx-4">
+                            <mat-label>Staging Password (Optional)</mat-label>
+                            <input matInput name="staging-pass"
+                                   formControlName="staging-pass">
+                        </mat-form-field>
+            
+                        </div>
+            
+                        <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" fxLayoutGap>
+
+                        <mat-form-field appearance="outline" fxFlex="100" class="mx-4">
+                            <mat-label>Internal Note (Optional)</mat-label>
+                            <textarea matInput name="internalnote" formControlName="internalnote" rows="2"></textarea>
+                        </mat-form-field>
+                        </div>
+            
+            
+            
+                    </form>    
+            </mat-tab>
+            <mat-tab label="Assigned Users (5)"> 
+
+            <div fxLayout="row" fxLayoutAlign="start center" fxFlex="100" fxLayoutGap class="mb-8 mt-8">
+                <mat-form-field appearance="outline" fxFlex="50">
+                    <mat-label>Select User</mat-label>
+                    <mat-select>
+                        <mat-option value="option">Create a new user</mat-option>
+                        <mat-option value="option">User 1</mat-option>
+                        <mat-option value="option">User 2</mat-option>
+                        <mat-option value="option">User 3</mat-option>
+                        <mat-option value="option">User 4</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <button mat-raised-button color="accent" class="btn-assign-user ml-4">Assign User</button>
+            </div>
+
+
+            <div fxLayout="row" fxLayoutAlign="start center" fxFlex="100%" fxLayoutGap class="mb-8 mt-8 w-100-p">
+                <mat-card fxFlex="100%" class="card-new-user">
+                    <mat-card-title>Create a new user</mat-card-title>
+                    <mat-card-content fxLayout="row wrap" fxLayoutGap="5px grid"> 
+                        
+                        <mat-form-field appearance="outline" fxFlex="100">
+                            <mat-label>Organization</mat-label>
+                            <mat-select>
+                                <mat-option value="option">Client 01</mat-option>
+                                <mat-option value="option">Client 02</mat-option>
+                                <mat-option value="option">Client 03</mat-option>
+                                <mat-option value="option">Client 04</mat-option>
+                                <mat-option value="option">Client 05</mat-option>
+                            </mat-select>
+                        </mat-form-field> 
+                        
+                            <mat-form-field appearance="outline" fxFlex="50">
+                                <mat-label>Name</mat-label>
+                                <input matInput name="firstname" formControlName="firstname">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" fxFlex="50">
+                                <mat-label>Las Name</mat-label>
+                                <input matInput name="lastname" formControlName="lastname">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" fxFlex="100">
+                                <mat-label>Email</mat-label>
+                                <input matInput name="email" formControlName="email">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" fxFlex="50">
+                                <mat-label>Role</mat-label>
+                                <mat-select>
+                                    <mat-option value="option">User</mat-option>
+                                    <mat-option value="option">Admin</mat-option>
+                                </mat-select>
+                            </mat-form-field> 
+
+                        <mat-form-field appearance="outline" fxFlex="50">
+                            <mat-label>Timezone</mat-label>
+                            <mat-select>
+                                <mat-option value="option">Timezone 01</mat-option>
+                                <mat-option value="option">Timezone 02</mat-option>
+                            </mat-select>
+                        </mat-form-field> 
+            
+
+
+  
+
+                        <mat-card-actions class="px-8">
+                            <button mat-raised-button color="accent" class="btn-assign-user ml-4">Create New User</button>
+                          </mat-card-actions>
+
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+
+
+                <div class="user-assigned mb-4" fxLayout="row" fxLayout.lt-lg="column" fxFlex="100%" fxFlex.lt-lg="100%" >
+                    <div class="p-16" fxLayout="row" fxLayoutAlign="start center" fxFlex="30">
+                        <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/Christy.jpg">
+                        <div class="ml-16">
+                            <div class="text-bold">Christy</div>
+                            <div class="h5 text-bold secondary-text">Team member</div>
+                        </div>
+                    </div>
+
+                    <div class="p-16" fxLayout="row" fxLayoutAlign="start center" fxFlex="40">
+                        <button mat-button><mat-icon>mail_outline</mat-icon> nombrecompleto@empresa.com</button>
+                    </div>
+
+                    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="30">
+                        <mat-checkbox class="notification-margin mr-16">Notification</mat-checkbox>
+                        <button mat-stroked-button color="warn">Remove</button>
+                    </div>
+                </div>
+
+                <div class="user-assigned mb-4" fxLayout="row" fxLayout.lt-lg="column" fxFlex="100%" fxFlex.lt-lg="100%" >
+                    <div class="p-16" fxLayout="row" fxLayoutAlign="start center" fxFlex="30">
+                        <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/Boyle.jpg">
+                        <div class="ml-16">
+                            <div class="text-bold">Boyle</div>
+                            <div class="h5 text-bold secondary-text">Team member</div>
+                        </div>
+                    </div>
+
+                    <div class="p-16" fxLayout="row" fxLayoutAlign="start center" fxFlex="40">
+                        <button mat-button><mat-icon>mail_outline</mat-icon> nombrecompleto@empresa.com</button>
+                    </div>
+
+                    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="30">
+                        <mat-checkbox class="notification-margin mr-16">Notification</mat-checkbox>
+                        <button mat-stroked-button color="warn">Remove</button>
+                    </div>
+                </div>
+
+                <div class="user-assigned mb-4" fxLayout="row" fxLayout.lt-lg="column" fxFlex="100%" fxFlex.lt-lg="100%" >
+                    <div class="p-16" fxLayout="row" fxLayoutAlign="start center" fxFlex="30">
+                        <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/Helen.jpg">
+                        <div class="ml-16">
+                            <div class="text-bold">Helen Perez</div>
+                            <div class="h5 text-bold secondary-text">Team member</div>
+                        </div>
+                    </div>
+
+                    <div class="p-16" fxLayout="row" fxLayoutAlign="start center" fxFlex="40">
+                        <button mat-button><mat-icon>mail_outline</mat-icon> nombrecompleto@empresa.com</button>
+                    </div>
+
+                    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="30">
+                        <mat-checkbox class="notification-margin mr-16">Notification</mat-checkbox>
+                        <button mat-stroked-button color="warn">Remove</button>
+                    </div>
+                </div>
+
+                <div class="user-assigned mb-4" fxLayout="row" fxLayout.lt-lg="column" fxFlex="100%" fxFlex.lt-lg="100%" >
+                    <div class="p-16" fxLayout="row" fxLayoutAlign="start center" fxFlex="30">
+                        <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/jane.jpg">
+                        <div class="ml-16">
+                            <div class="text-bold">Jane</div>
+                            <div class="h5 text-bold secondary-text">Customer</div>
+                        </div>
+                    </div>
+
+                    <div class="p-16" fxLayout="row" fxLayoutAlign="start center" fxFlex="40">
+                        <button mat-button><mat-icon>mail_outline</mat-icon> nombrecompleto@empresa.com</button>
+                    </div>
+
+                    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="30">
+                        <mat-checkbox class="notification-margin mr-16">Notification</mat-checkbox>
+                        <button mat-stroked-button color="warn">Remove</button>
+                    </div>
+                </div>
+
+
+                <div class="user-assigned mb-4" fxLayout="row" fxLayout.lt-lg="column" fxFlex="100%" fxFlex.lt-lg="100%" >
+                    <div class="p-16" fxLayout="row" fxLayoutAlign="start center" fxFlex="30">
+                        <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/james.jpg">
+                        <div class="ml-16">
+                            <div class="text-bold">James</div>
+                            <div class="h5 text-bold secondary-text">Customer</div>
+                        </div>
+                    </div>
+
+                    <div class="p-16" fxLayout="row" fxLayoutAlign="start center" fxFlex="40">
+                        <button mat-button><mat-icon>mail_outline</mat-icon> nombrecompleto@empresa.com</button>
+                    </div>
+
+                    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="30">
+                        <mat-checkbox class="notification-margin mr-16">Notification</mat-checkbox>
+                        <button mat-stroked-button color="warn">Remove</button>
+                    </div>
+                </div>
+
+
+            </mat-tab>
+
+            <mat-tab label="Tabs"> 
+
+<h2>Tabs Settings</h2>
+
+                <div class="tab-projects">
+                    <div cdkDropList class="tab-container tabs-disabled">
+                        <div class="tab-box py-0" fxLayout="column" fxLayoutAlign="start start">
+                            <mat-checkbox class="tabs-projects mb-8" [disabled]="true">Status Progress</mat-checkbox>
+                            <mat-checkbox class="tabs-projects mb-4" [disabled]="true">Development</mat-checkbox>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="tab-projects">
+                    <div cdkDropList class="tab-container" (cdkDropListDropped)="drop($event)">
+                        <div class="tab-box" *ngFor="let movie of movies" cdkDrag fxLayoutAlign="start start">
+                            <div class="custom-placeholder" *cdkDragPlaceholder></div>
+                            <mat-checkbox>{{movie}}</mat-checkbox>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                  <a mat-button color="accent" > <mat-icon>add</mat-icon>Add new custom tab</a>
+
+
+            </mat-tab>
+          </mat-tab-group>
+
+        
+    </div>
+
+    <div mat-dialog-actions class="m-0 p-16" fxLayout="row" fxLayoutAlign="space-between center">
+        <div>
+            <button mat-raised-button
+                    color="accent"
+                    (click)="matDialogRef.close(['send',composeForm])"
+                    class="save-button"
+                    [disabled]="composeForm.invalid"
+                    aria-label="SAVE">
+                CREATE NEW PROJECT
+            </button>
+
+        </div>
+    </div>
+</div>

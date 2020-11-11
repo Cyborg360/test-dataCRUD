@@ -1,0 +1,69 @@
+<div class="dialog-content-wrapper">
+    <mat-toolbar class="mat-accent m-0">
+        <mat-toolbar-row fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="title dialog-title">SEND NOTIFICATION</span>
+            <button mat-icon-button (click)="matDialogRef.close()" aria-label="Close dialog">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div mat-dialog-content class="p-20 py-12 m-0">
+
+    <div class="users-notification w-100-p" fxLayout="column" fxLayoutAlign="start start" >
+
+        <div class="user-assigned w-100-p" fxLayout="row" fxLayout.lt-lg="row" fxFlex="100" fxFlex.lt-lg="100%" >
+            <div class="py-8" fxLayout="row" fxLayoutAlign="start center" fxFlex="60">
+                <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/jane.jpg">
+                <div class="ml-16">
+                    <div class="text-bold">Jane Rodriguez</div>
+                    <div class="h5 text-bold secondary-text">Customer</div>
+                </div>
+            </div>
+            <div class="py-8 mr-8" fxLayout="row" fxLayoutAlign="end center" fxFlex="60">
+                <mat-checkbox class="widget-notification primary-300-fg">Notification</mat-checkbox>
+            </div>
+        </div>
+
+        <div class="user-assigned w-100-p" fxLayout="row" fxLayout.lt-lg="row" fxFlex="100" fxFlex.lt-lg="100%" >
+            <div class="py-8" fxLayout="row" fxLayoutAlign="start center" fxFlex="60">
+                <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/james.jpg">
+                <div class="ml-16">
+                    <div class="text-bold">James Saavedra</div>
+                    <div class="h5 text-bold secondary-text">Customer</div>
+                </div>
+            </div>
+            <div class="py-8 mr-8" fxLayout="row" fxLayoutAlign="end center" fxFlex="60">
+                <mat-checkbox class="widget-notification primary-300-fg">Notification</mat-checkbox>
+            </div>
+        </div>
+
+        <div class="user-assigned w-100-p" fxLayout="row" fxLayout.lt-lg="row" fxFlex="100" fxFlex.lt-lg="100%" >
+            <div class="py-8" fxLayout="row" fxLayoutAlign="start center" fxFlex="60">
+                <img class="w-40 h-40 border-radius-100" src="assets/images/avatars/Helen.jpg">
+                <div class="ml-16">
+                    <div class="text-bold">Helen Perez</div>
+                    <div class="h5 text-bold secondary-text">Team member</div>
+                </div>
+            </div>
+            <div class="py-8 mr-md-8" fxLayout="row" fxLayoutAlign="end center" fxFlex="60">
+                <mat-checkbox class="widget-notification primary-300-fg">Notification</mat-checkbox>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div mat-dialog-actions class="m-0 p-0" fxLayout="column" fxLayoutAlign="start end" fxFlex="100">
+        <div class="m-16 mt-0" fxLayout="column" fxLayoutAlign="start end">
+            <button mat-raised-button
+                    color="accent"
+                    (click)="matDialogRef.close(['send',composeForm])"
+                    class="save-button"
+                    [disabled]="composeForm.invalid">
+                Send Notification
+            </button>
+
+        </div>
+    </div>
+</div>

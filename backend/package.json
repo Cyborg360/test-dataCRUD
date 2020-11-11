@@ -1,0 +1,6 @@
+{
+  "scripts": {
+      "start": "node D:/Projects/PHP/test-dataCRUD/backend",
+      "debug": "nodemon --inspect D:/Projects/PHP/test-dataCRUD/backend"
+  }
+}

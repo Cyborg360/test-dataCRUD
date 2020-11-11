@@ -1,0 +1,94 @@
+<mat-table #table [dataSource]="dataSource"
+           [@animateStagger]="{value:'50'}">
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Nombre</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+            <p class="text-truncate font-weight-600"><a href="javascript:void()" style="cursor: pointer;">{{user.name}}</a></p>
+        </mat-cell>
+    </ng-container>
+
+    <!-- Email Column -->
+    <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef fxHide fxShow.gt-sm>Correo</mat-header-cell>
+        <mat-cell *matCellDef="let user" fxHide fxShow.gt-sm>
+            <p class="email text-truncate">
+                {{user.email}}
+            </p>
+        </mat-cell>
+    </ng-container>
+
+    <!-- Password Column -->
+    <ng-container matColumnDef="password">
+        <mat-header-cell *matHeaderCellDef fxHide fxShow.gt-sm>Clave</mat-header-cell>
+        <mat-cell *matCellDef="let user" fxHide fxShow.gt-sm>
+            <p class="email text-truncate">
+                {{user.password}}
+            </p>
+        </mat-cell>
+    </ng-container>
+
+    <!-- Phone Column -->
+    <ng-container matColumnDef="phone">
+        <mat-header-cell *matHeaderCellDef fxHide fxShow.gt-md>Teléfono</mat-header-cell>
+        <mat-cell *matCellDef="let user" fxHide fxShow.gt-md>
+            <p class="phone text-truncate">
+                {{user.phone}}
+            </p>
+        </mat-cell>
+    </ng-container>
+
+    <!-- Address Column -->
+    <ng-container matColumnDef="address">
+        <mat-header-cell *matHeaderCellDef fxHide fxShow.gt-lg>Dirección</mat-header-cell>
+        <mat-cell *matCellDef="let user" fxHide fxShow.gt-lg>
+            <p class="job-title text-truncate">
+                {{user.address}}
+            </p>
+        </mat-cell>
+    </ng-container>
+
+    <!-- Company Column -->
+    <ng-container matColumnDef="created_at">
+        <mat-header-cell *matHeaderCellDef fxHide fxShow.gt-lg>Creado en</mat-header-cell>
+        <mat-cell *matCellDef="let user" fxHide fxShow.gt-lg>
+            <p class="company text-truncate">
+                {{user.created_at | date:'short'}}
+            </p>
+        </mat-cell>
+    </ng-container>
+
+    <!-- Buttons Column -->
+    <ng-container matColumnDef="buttons">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let user">
+            <div fxFlex="row" fxLayoutAlign="end center">
+   
+                <button mat-icon-button [matMenuTriggerFor]="moreMenu" aria-label="More"
+                        (click)="$event.stopPropagation();">
+                    <mat-icon class="secondary-text">more_vert</mat-icon>
+                </button>
+
+                <mat-menu #moreMenu="matMenu">
+                    <button mat-menu-item aria-label="remove" (click)="deleteUser(user)">
+                        <mat-icon>delete</mat-icon>
+                        <span>Eliminar</span>
+                    </button>
+                </mat-menu>
+            </div>
+
+        </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let user; columns: displayedColumns;"
+             class="user"
+             (click)="editUser(user)"
+             [ngClass]="{'accent-50':checkboxes[user.id]}"
+             [@animate]="{value:'*',params:{y:'100%'}}">
+    </mat-row>
+</mat-table>
+
+
